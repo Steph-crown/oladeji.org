@@ -1,0 +1,566 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  position: relative;
+}
+
+nav {
+  /* background-color: red; */
+  align-items: center;
+  justify-content: space-between;
+  /* width: 100%;
+    flex-direction: column; */
+  display: flex;
+  padding: 50px;
+  position: relative;
+}
+
+.nav-link:hover {
+  transition: 1s ease-out;
+  color: #121212;
+  background-color: white;
+  padding: 16px;
+  border-radius: 3px;
+}
+
+nav img {
+  height: 90px;
+  width: 90px;
+}
+
+@media screen and (max-width: 640px) {
+  nav img {
+    height: 64px;
+    width: 64px;
+  }
+}
+
+.menu-btn {
+  display: none;
+}
+
+.words {
+  display: flex;
+  margin: auto;
+  /* justify-content: center;
+  align-items: center; */
+  gap: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.dropdown {
+  display: none;
+}
+@media screen and (max-width: 1200px) {
+  .words {
+    display: none;
+  }
+  .menu-btn {
+    display: block;
+  }
+  .menu-btn img {
+    height: 40px;
+    width: 40px;
+  }
+  .dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    width: 100%;
+    max-width: 400px;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    background: white;
+    width: 100%;
+    height: 100%;
+    z-index: 183838;
+    box-shadow: 0 10px 15px -3px #0000001a, 0 4px 6px -4px #0000001a;
+    padding: 96px 40px;
+    right: -400px;
+    transition: 1s;
+  }
+
+  .dropdown a,
+  .dropdown .volunteerbtn {
+    color: #343434;
+    display: block;
+    font-size: 20px;
+    margin: 14px 0;
+    padding: 12px;
+    width: 100%;
+    text-align: left;
+  }
+
+  .dropdown .btn {
+    border: 1px solid #121212;
+    text-align: center;
+    font-size: 16px;
+    padding: 16px;
+    font-weight: 600;
+    width: 100%;
+  }
+
+  .close {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+  }
+
+  .close img {
+    height: 32px;
+    width: 32px;
+  }
+  .dropdown .donate-btn {
+    padding: 0;
+  }
+  .dropdown .donate-btn button {
+    background: #ea0028;
+    border: none;
+    color: white;
+  }
+}
+
+/* .icons button {
+  width: 100px;
+  text-align: center;
+  padding: 12px;
+  background-color: #ea0028;
+  border: 1px solid #ea0028;
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+} */
+
+.headbtn {
+  width: 255px;
+  background-color: #ea0028;
+  border: 1px solid #ea0028;
+  color: white;
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 25px auto;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.icons .btn {
+  width: 100px;
+  background-color: #ea0028;
+  border: 3px solid #ea0028;
+  color: white;
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin: 25px auto; */
+  padding: 18px 72px;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 800px) {
+  .icons .btn {
+    font-size: 14px;
+    padding: 14px 64px;
+  }
+}
+.words .volunteerbtn {
+  width: 100px;
+  background-color: transparent;
+  border: 1px solid #ea0028;
+  color: white;
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin: 25px auto; */
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  display: none;
+}
+
+.icons .volunteerbtn {
+  width: 100px;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin: 25px auto; */
+  /* padding: 10px; */
+  font-size: 16px;
+  font-weight: 700;
+}
+
+a {
+  padding: 10px;
+  justify-content: space-around;
+  text-decoration: none;
+  color: white;
+  display: block;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.icon {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+}
+
+.icons {
+  /* margin-right: 50px; */
+  /* position: absolute; */
+  right: 0;
+  gap: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroimage {
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  background: #121212;
+}
+
+/* .icons img {
+  justify-content: space-around;
+  fill: white;
+  width: 18px;
+  height: 18px;
+} */
+
+header h2 {
+  margin: 24px auto 24px auto;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  width: 85%;
+  font-size: 96px;
+  color: white;
+  line-height: 145px;
+  max-width: 1102px;
+}
+
+header h4 {
+  font-size: 22px;
+  color: white;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  width: 35%;
+  margin: auto;
+  line-height: 35.42px;
+}
+
+h2 .change {
+  -webkit-text-stroke: white 3px;
+  color: transparent;
+}
+
+.nav-link.current {
+  position: relative;
+}
+
+.current:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  width: 100%;
+  height: 2px;
+}
+
+header {
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+@media (max-width: 900px) and (min-width: 280px) {
+  nav {
+    /* background-color: red; */
+    align-items: center;
+    justify-content: space-between;
+    /* width: 100%;
+      flex-direction: column; */
+    display: flex;
+    padding: 15px;
+    /* position: relative; */
+  }
+
+  .icon {
+    display: block;
+    cursor: pointer;
+    /* position: absolute; */
+    right: 0;
+    font-size: 20px;
+    /* color: #121212; */
+  }
+
+  .words {
+    position: fixed;
+    /* right: 100%; */
+    top: 160px;
+    gap: 0;
+    flex-direction: column;
+    background-color: white;
+    width: 50%;
+    /* text-align: center; */
+    /* transition: 0.3s; */
+    margin-left: 40em;
+    /* display: block; */
+    /* justify-content: left;
+    align-items: center; */
+    /* display: none; */
+  }
+
+  .words.active {
+    position: fixed;
+    margin-left: 6em;
+    top: 160px;
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+    transition: 0.08s ease-in-out;
+    border-radius: 5px;
+    padding: 10px 0px;
+  }
+
+  .words .volunteerbtn {
+    width: 180px;
+    background-color: #ea0028;
+    border: 1px solid #ea0028;
+    color: white;
+    font-family: "Inter", sans-serif;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 5px;
+  }
+
+  .icons .volunteerbtn {
+    display: none;
+  }
+
+  nav.active .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .words.active a {
+    display: block;
+    text-align: left;
+  }
+
+  .nav-link {
+    text-align: left;
+    color: #121212;
+  }
+
+  .heroimage {
+    position: absolute;
+    width: 1487.13px;
+    height: 928px;
+    left: -547px;
+    top: 0px;
+    background: #121212;
+
+    /* overflow:-moz-hidden-unscrollable; */
+  }
+
+  .nav-link:hover {
+    transition: 0.01s ease-out;
+    color: #121212;
+    background-color: rgb(247, 216, 216);
+    padding: 10px;
+    border-radius: 0px;
+    /* box-shadow: -1px -1px grey; */
+    border: #ea0028 solid 0.51px;
+  }
+
+  /* .icons img {
+    display: none;
+  } */
+
+  header h2 {
+    margin: 40px auto 0 auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    /* width: 385px;
+        height: 183px; */
+    /* left: 21px;
+        top: 211px;         */
+    font-size: 64px;
+    color: white;
+
+    /* position: absolute; */
+    line-height: 80px;
+  }
+
+  header h4 {
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    width: 95%;
+    margin: 20px auto;
+    line-height: 35.42px;
+  }
+
+  .headbtn {
+    width: 255px;
+    background-color: #ea0028;
+    border: 1px solid #ea0028;
+    color: white;
+    font-family: "Inter", sans-serif;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px auto 25px auto;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  a {
+    padding: 10px;
+    justify-content: space-around;
+    text-decoration: none;
+    color: white;
+    display: block;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .icons {
+    /* margin-right: 50px;
+    position: absolute; */
+    right: 0;
+    gap: 10px;
+    /* display: flex; */
+    /* cursor: pointer; */
+  }
+
+  .icons .volunteerbtn {
+    display: none;
+  }
+
+  h2 .change {
+    -webkit-text-stroke: white 2px;
+    color: transparent;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1120px) {
+  .heroimage {
+    width: 100%;
+    height: 654px;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    background: #121212;
+  }
+
+  header h2 {
+    margin: 45px auto 0 auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    width: 95%;
+    font-size: 70px;
+    color: white;
+    line-height: 120px;
+  }
+
+  header h4 {
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    width: 47%;
+    margin: auto;
+    line-height: 35.42px;
+  }
+}
+
+@media (min-width: 750px) and (max-width: 870px) {
+  .words.active {
+    position: fixed;
+    width: 230px;
+    margin-left: 23em;
+    top: 160px;
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+    transition: 0.08s ease-in-out;
+    border-radius: 5px;
+    padding: 10px 0px;
+  }
+
+  .words {
+    position: fixed;
+    /* right: 100%; */
+    top: 160px;
+    gap: 0;
+    flex-direction: column;
+    background-color: white;
+    width: 50%;
+    /* text-align: center; */
+    /* transition: 0.3s; */
+    margin-left: 60em;
+    /* display: block; */
+    /* display: none; */
+  }
+}
+
+@media (max-width: 780px) {
+  header h2 {
+    font-size: 48px;
+    line-height: 60px;
+  }
+}
