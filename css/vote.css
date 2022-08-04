@@ -591,7 +591,7 @@
 @media screen and (max-width: 400px) {
   .votendimg .Blessingimg {
     height: 560px;
-    margin-top: -240px;
+    margin-top: -120px;
   }
   .vote * {
     margin-bottom: 8px;
