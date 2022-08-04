@@ -13,6 +13,7 @@ myHeaders.append(
 const loadingNode = document.querySelector(".loading");
 const donationsTableNode = document.querySelector(".donations-container");
 const donationsCountNode = document.querySelector(".donations-count");
+const donationsAmountNode = document.querySelector(".donations-amount");
 const footerNode = document.querySelector("footer");
 
 const requestOptions = {
@@ -41,6 +42,7 @@ fetch("https://api.paystack.co/transaction", requestOptions)
     loadingNode.style.display = "none";
     const data = result.data;
     let count = 0;
+    let amountTotal = 0;
     data.forEach((trx) => {
       const {
         amount,
@@ -53,17 +55,21 @@ fetch("https://api.paystack.co/transaction", requestOptions)
       if (status === "success") {
         const trxNode = document.createElement("tr");
         trxNode.innerHTML = `
-
-      <td>${first_name} ${last_name}</td>
-      <td>${currency} ${numberWithCommas(amount / 100)}</td>
-      <td>${bank}</td>
-      <td>${channel}</td>
-      <td>${new Date(createdAt).toLocaleDateString("en-UK", options)}</td>
-      `;
+          <td>${first_name} ${last_name}</td>
+          <td>${currency} ${numberWithCommas(amount / 100)}</td>
+          <td>${bank}</td>
+          <td>${channel}</td>
+          <td>${new Date(createdAt).toLocaleDateString("en-UK", options)}</td>
+        `;
         donationsTableNode.style.display = "block";
         document.querySelector("tbody").appendChild(trxNode);
         count++;
-        donationsCountNode.innerHTML = `Total donations: ${count}`;
+        console.log("amount", amountTotal);
+        amountTotal += amount / 100;
+        donationsAmountNode.innerHTML = `Total donated amount: ${currency} ${numberWithCommas(
+          amountTotal
+        )}`;
+        donationsCountNode.innerHTML = `Total donation count: ${count}`;
         footerNode.style.display = "flex";
       }
     });
