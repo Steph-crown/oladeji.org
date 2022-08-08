@@ -488,7 +488,13 @@
   .votendimg .Blessingimg {
     height: 720px;
     width: 480px;
-    margin-top: -280px;
+    margin-top: -200px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .votendimg .Blessingimg {
+    margin-top: -100px;
   }
 }
 
