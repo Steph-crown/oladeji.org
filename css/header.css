@@ -564,3 +564,16 @@ header {
     line-height: 60px;
   }
 }
+
+.more-a {
+  display: flex !important;
+  justify-content: flex-start !important;
+  width: 100% !important;
+  padding: 0 !important;
+}
+
+@media (max-width: 800px) {
+  .more-a {
+    justify-content: center !important;
+  }
+}
