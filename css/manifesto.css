@@ -1,0 +1,144 @@
+.icons .volunteerbtn {
+  border: 1px solid #ea0028;
+  color: #ea0028;
+}
+
+header {
+  min-height: unset;
+}
+
+.nav-link {
+  color: #232323;
+}
+
+.manifesto-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 0rem;
+  margin-bottom: 6rem;
+}
+
+.left {
+  width: 50%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-image {
+  width: 100%;
+  object-fit: contain;
+  /* height: 600px; */
+  max-height: 90vh;
+}
+.right {
+  width: 50%;
+  padding: 16px 32px;
+  margin: 0;
+}
+@media screen and (max-width: 820px) {
+  .manifesto-flex {
+    flex-direction: column;
+    margin-top: 0.5rem;
+  }
+  .left {
+    width: 100%;
+  }
+  .right {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 16px 18px;
+  }
+}
+
+.right-header {
+  font-size: 3rem;
+  line-height: 140%;
+  font-family: Poppins;
+}
+@media screen and (max-width: 1024px) {
+  .right-header {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 720px) {
+  .right-header {
+    font-size: 1.6rem;
+  }
+}
+
+.sub-head {
+  font-size: 2rem;
+  line-height: 140%;
+  font-family: Poppins;
+  margin-bottom: 1rem;
+}
+.first-sub {
+  margin-top: 3rem;
+}
+@media screen and (max-width: 1024px) {
+  .sub-head {
+    font-size: 1.6rem;
+  }
+  .first-sub {
+    margin-top: 1.6rem;
+  }
+}
+@media screen and (max-width: 720px) {
+  .sub-head {
+    font-size: 1.6rem;
+    margin-bottom: 0;
+  }
+}
+
+.right li {
+  margin-left: 16px;
+}
+
+.body-text {
+  font-size: 1.2rem;
+  font-family: Inter;
+  line-height: 160%;
+  color: #303030;
+  margin-top: 2rem;
+}
+.body-text.mt-3 {
+  margin-top: 6rem;
+}
+.body-text b {
+  font-weight: 800;
+  color: #020202;
+}
+@media screen and (max-width: 1024px) {
+  .body-text {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 720px) {
+  .body-text {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 420px) {
+  .body-text {
+    font-size: 0.8rem;
+    margin-top: 1rem;
+  }
+  .body-text.mt-3 {
+    margin-top: 3rem;
+  }
+}
+
+.green {
+  color: #1d9a78;
+}
+.yellow {
+  color: #ffc000;
+}
+.red {
+  color: #ea0028;
+}
