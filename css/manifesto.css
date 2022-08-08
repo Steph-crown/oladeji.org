@@ -98,6 +98,14 @@ header {
 .right li {
   margin-left: 16px;
 }
+.right.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.right.image img {
+  width: 80%;
+}
 
 .body-text {
   font-size: 1.2rem;
