@@ -55,6 +55,16 @@ header {
   }
 }
 
+@media screen and (min-width: 821px) {
+  .manifesto-flex:nth-child(2n) {
+    flex-direction: row-reverse;
+  }
+
+  .manifesto-flex:nth-child(2n) .right {
+    padding-left: 72px;
+  }
+}
+
 .right-header {
   font-size: 3rem;
   line-height: 140%;
