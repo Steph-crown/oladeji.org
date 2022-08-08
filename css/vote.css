@@ -119,6 +119,7 @@
   color: #ffffff;
   font-family: Inter;
   margin: 64px 48px;
+  font-style: italic;
 }
 
 .votendimg img {
@@ -611,7 +612,7 @@
 @media screen and (max-width: 400px) {
   .votendimg .Blessingimg {
     height: 560px;
-    margin-top: -240px;
+    margin-top: -60px;
   }
   .vote * {
     margin-bottom: 8px;
@@ -640,7 +641,7 @@
 @media screen and (max-width: 340px) {
   .votendimg .Blessingimg {
     height: 560px;
-    margin-top: -180px;
+    margin-top: -120px;
   }
 }
 @media screen and (max-width: 285px) {

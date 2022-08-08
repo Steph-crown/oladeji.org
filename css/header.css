@@ -28,14 +28,30 @@ nav {
 }
 
 nav img {
-  height: 90px;
-  width: 90px;
+  height: 120px;
+  width: 120px;
+}
+
+.party-logo {
+  animation-name: turn;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+}
+
+@keyframes turn {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @media screen and (max-width: 640px) {
   nav img {
-    height: 64px;
-    width: 64px;
+    height: 80px;
+    width: 80px;
   }
 }
 
@@ -281,6 +297,12 @@ header h4 {
   width: 35%;
   margin: auto;
   line-height: 35.42px;
+}
+
+header h4 span {
+  font-size: 26px;
+  display: block;
+  margin-top: 8px;
 }
 
 h2 .change {
