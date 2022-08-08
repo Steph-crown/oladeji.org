@@ -494,7 +494,19 @@
 
 @media screen and (max-width: 900px) {
   .votendimg .Blessingimg {
-    margin-top: -100px;
+    margin-top: -400px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .votendimg .Blessingimg {
+    margin-top: -300px;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .votendimg .Blessingimg {
+    margin-top: -300px;
   }
 }
 
@@ -599,7 +611,7 @@
 @media screen and (max-width: 400px) {
   .votendimg .Blessingimg {
     height: 560px;
-    margin-top: -120px;
+    margin-top: -240px;
   }
   .vote * {
     margin-bottom: 8px;
@@ -622,5 +634,18 @@
   .vote h2 {
     font-size: 28px;
     line-height: 36px;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .votendimg .Blessingimg {
+    height: 560px;
+    margin-top: -180px;
+  }
+}
+@media screen and (max-width: 285px) {
+  .votendimg .Blessingimg {
+    /* height: 560px; */
+    margin-top: -90px;
   }
 }

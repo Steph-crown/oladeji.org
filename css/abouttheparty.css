@@ -146,7 +146,7 @@ h1 .pressy {
   -webkit-text-stroke: 1px #121212;
 }
 
-@media (max-width: 800px) and (min-width: 280px) {
+@media (max-width: 800px) {
   .abtdonate {
     display: flex;
     flex-direction: column;
