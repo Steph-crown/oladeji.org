@@ -649,3 +649,10 @@
     margin-top: -90px;
   }
 }
+
+.vote h2 small {
+  font-size: 18px;
+  display: block;
+  font-weight: 300;
+  margin-top: -10px;
+}
