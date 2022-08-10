@@ -66,10 +66,10 @@ fetch("https://api.paystack.co/transaction", requestOptions)
         count++;
         console.log("amount", amountTotal);
         amountTotal += amount / 100;
-        donationsAmountNode.innerHTML = `Total donated amount: ${currency} ${numberWithCommas(
+        donationsAmountNode.innerHTML = `${currency} ${numberWithCommas(
           amountTotal
         )}`;
-        donationsCountNode.innerHTML = `Total donation count: ${count}`;
+        donationsCountNode.innerHTML = `${count}`;
         footerNode.style.display = "flex";
       }
     });
