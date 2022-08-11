@@ -61,7 +61,7 @@ fetch("https://api.paystack.co/transaction", requestOptions)
           <td>${channel}</td>
           <td>${new Date(createdAt).toLocaleDateString("en-UK", options)}</td>
         `;
-        donationsTableNode.style.display = "block";
+        donationsTableNode.style.display = "flex";
         document.querySelector("tbody").appendChild(trxNode);
         count++;
         console.log("amount", amountTotal);
