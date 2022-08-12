@@ -21,24 +21,37 @@
   overflow-x: hidden;
   max-width: 904px;
   width: 100%;
-  animation-name: transX;
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
 }
 
 .marquee > div {
   display: flex;
   width: max-content;
+  animation-name: transX;
+  animation-duration: 70s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.marquee > div:hover {
+  animation-play-state: paused;
 }
 
 /* marquee transition animation from right to left */
 @keyframes transX {
-  from {
+  0% {
     transform: translateX(0px);
   }
-  to {
-    transform: translateX(-800px);
+  10% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(-2500px);
+  }
+  90% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(0px);
   }
 }
 
@@ -48,18 +61,38 @@
   margin-right: 32px;
   width: 280px;
   flex: 1 0 auto;
+  background: white;
+}
+
+.lg-group.longest {
+  width: 560px;
+}
+
+.lg-group.longest ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+.lg-group.longest li {
+  width: 45%;
+  margin-left: 12px;
 }
 
 .marquee h5 {
   font-size: 20px;
-  margin-bottom: 16px;
-  color: white;
+  margin-bottom: 24px;
+  color: #121212;
 }
 
+.marquee li,
 .marquee p {
   font-family: Inter;
   font-size: 14px;
-  line-height: 100%;
-  margin-bottom: 16px;
-  color: #aaa;
+  line-height: 110%;
+  margin-bottom: 20px;
+  color: #323232;
+  text-align: left;
 }

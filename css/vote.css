@@ -126,10 +126,12 @@
   position: absolute;
   z-index: 1;
   right: 72px;
-  margin-top: -380px;
+  margin-top: -280px;
   margin-right: 0px;
-  width: 450px;
-  height: 800px;
+  /* width: 450px;
+  height: 800px; */
+  width: 520px;
+  height: 924px;
   /* background-color: black; */
 }
 
@@ -440,9 +442,9 @@
   }
 
   .votendimg .Blessingimg {
-    position: relative;
+    position: absolute;
     z-index: 1;
-    left: 0;
+    right: 0;
     /* margin: -71px 25px 0 auto; */
     justify-content: center;
     align-items: center;
@@ -489,13 +491,13 @@
   .votendimg .Blessingimg {
     height: 720px;
     width: 480px;
-    margin-top: -200px;
+    margin-top: -160px;
   }
 }
 
 @media screen and (max-width: 900px) {
   .votendimg .Blessingimg {
-    margin-top: -400px;
+    margin-top: -266px;
   }
 }
 
