@@ -1,0 +1,65 @@
+.vote h4 {
+  font-size: 16px;
+  line-height: 140%;
+}
+
+.vote {
+  margin-bottom: 32px;
+  margin-top: 32px;
+}
+.vote h3 {
+  font-size: 20px;
+  line-height: 140%;
+}
+
+.vote h2 {
+  font-size: 24px;
+  line-height: 140%;
+}
+
+.marquee {
+  overflow-x: hidden;
+  max-width: 904px;
+  width: 100%;
+  animation-name: transX;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.marquee > div {
+  display: flex;
+  width: max-content;
+}
+
+/* marquee transition animation from right to left */
+@keyframes transX {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-800px);
+  }
+}
+
+.lg-group {
+  border: 1px solid #ffffff11;
+  padding: 16px;
+  margin-right: 32px;
+  width: 280px;
+  flex: 1 0 auto;
+}
+
+.marquee h5 {
+  font-size: 20px;
+  margin-bottom: 16px;
+  color: white;
+}
+
+.marquee p {
+  font-family: Inter;
+  font-size: 14px;
+  line-height: 100%;
+  margin-bottom: 16px;
+  color: #aaa;
+}
