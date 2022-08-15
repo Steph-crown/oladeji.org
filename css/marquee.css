@@ -58,12 +58,12 @@
 }
 
 .lg-group {
-  border: 1px solid #ffffff11;
+  /* border: 1px solid #ffffff11; */
   padding: 16px;
   margin-right: 32px;
   width: 280px;
   flex: 1 0 auto;
-  background: black;
+  background: #121212;
 }
 
 .lg-group.longest {
