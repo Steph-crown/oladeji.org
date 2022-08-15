@@ -18,16 +18,18 @@
 }
 
 .marquee {
-  overflow-x: hidden;
-  max-width: 904px;
+  overflow-y: hidden;
+  /* max-width: 904px; */
+  max-height: 400px;
   width: 100%;
 }
 
 .marquee > div {
   display: flex;
+  flex-direction: column;
   width: max-content;
   animation-name: transX;
-  animation-duration: 70s;
+  animation-duration: 100s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
@@ -39,19 +41,19 @@
 /* marquee transition animation from right to left */
 @keyframes transX {
   0% {
-    transform: translateX(0px);
+    transform: translateY(0px);
   }
   10% {
-    transform: translateX(0px);
+    transform: translateY(0px);
   }
   50% {
-    transform: translateX(-2500px);
+    transform: translateY(-3702px);
   }
   90% {
-    transform: translateX(0px);
+    transform: translateY(0px);
   }
   100% {
-    transform: translateX(0px);
+    transform: translateY(0px);
   }
 }
 
@@ -61,7 +63,7 @@
   margin-right: 32px;
   width: 280px;
   flex: 1 0 auto;
-  background: white;
+  background: black;
 }
 
 .lg-group.longest {
@@ -71,28 +73,33 @@
 .lg-group.longest ul {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: space-between;
   margin-top: 16px;
+  padding: 12px 32px;
 }
 
 .lg-group.longest li {
-  width: 45%;
+  width: 100%;
   margin-left: 12px;
 }
 
 .marquee h5 {
   font-size: 20px;
   margin-bottom: 24px;
-  color: #121212;
+  color: #ffffff;
+  margin-left: 12px;
+  text-align: left;
 }
 
 .marquee li,
 .marquee p {
   font-family: Inter;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 110%;
-  margin-bottom: 20px;
-  color: #323232;
+  margin-bottom: 32px;
+  color: #dedede;
   text-align: left;
+  text-transform: capitalize;
 }
